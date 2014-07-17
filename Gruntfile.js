@@ -36,8 +36,9 @@ module.exports = function(grunt) {
 						requireConfig: {
 							baseUrl: './',
 							paths: {
-								'Gwa.Event.Dispatcher': 'bower_components/gwa-event-dispatcher/dist/Dispatcher',
-								'Gwa.Data.Observable': 'src/js/Observable'
+								'Gwa.Event.Dispatcher' : 'bower_components/gwa-event-dispatcher/dist/Dispatcher',
+								'Gwa.Data.Enum'        : 'bower_components/gwa-data-enum/dist/Enum',
+								'Gwa.Data.Observable'  : 'src/js/Observable'
 							}
 						}
 					}

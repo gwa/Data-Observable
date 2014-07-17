@@ -22,6 +22,7 @@
   "dependencies": {
     "requirejs": "~2.1",
     "gwa-codestyle": "gwa/codestyle#~1.0",
-    "gwa-event-dispatcher": "gwa/Event-Dispatcher#~0.0"
+    "gwa-event-dispatcher": "gwa/Event-Dispatcher#~0.0",
+    "gwa-data-enum": "gwa/data-enum#~0.0.2"
   }
 }

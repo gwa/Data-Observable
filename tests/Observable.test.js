@@ -1,4 +1,4 @@
-define(['Gwa.Data.Observable'], function( DataObservable ) {
+define(['Gwa.Data.Enum', 'Gwa.Data.Observable'], function( DataEnum, DataObservable ) {
 
 	describe("An observable", function() {
 
@@ -12,6 +12,26 @@ define(['Gwa.Data.Observable'], function( DataObservable ) {
 			expect(typeof data.get('foo')).toEqual('undefined');
 			data.set('foo', 'bar');
 			expect(data.get('foo')).toEqual('bar');
+		});
+
+		it("can have an Enum set as data", function() {
+			var data = new DataObservable();
+			var en = new DataEnum(['foo', 'bar']);
+			en.set('bar');
+			expect(en.get()).toEqual('bar');
+			data.set('foo', en);
+			expect(data.get('foo')).toEqual('bar');
+
+			var myvar = null;
+			var func = function( val ) {
+				myvar = val;
+			};
+			data.on('FOO_CHANGE', func);
+
+			data.set('foo', 'foo');
+			expect(data.get('foo')).toEqual('foo');
+			expect(en.get('foo')).toEqual('foo');
+			expect(myvar).toEqual('foo');
 		});
 
 		it("can have data unset", function() {
