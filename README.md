@@ -4,7 +4,7 @@ Data-Observable
 A simple observable "parameter bag”.
 
 ~~~~~~~~.js
-var data = new Observable();
+var data = new gwa.DataObservable();
 data.on('SETTINGS_CHANGE', function( key, newval ) {
 	// handle all settings changes
 });
