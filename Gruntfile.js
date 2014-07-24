@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 		},
 
 		jasmine: {
-			mytask: {
+			require: {
 				options: {
 					vendor: [
 						'bower_components/requirejs/require.js'
